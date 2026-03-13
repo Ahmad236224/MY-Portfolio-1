@@ -9,17 +9,19 @@
 }
 
 body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Poppins, sans-serif;
+margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-main);
   line-height: 1.6;
+  overflow-x: hidden; /* THE MAGIC BULLET: Stops horizontal scrolling */
 }
 
 .portfolio-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 0 20px;
+  overflow-x: hidden; /* Keeps everything locked inside the screen */
 }
 
 /* Custom Logo Styling */
