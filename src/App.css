@@ -331,64 +331,63 @@ margin: 0;
 .social-link:hover {
   background: rgba(100, 255, 218, 0.1);
 }
+/* Add this at the very top of your App.css file */
+* {
+  box-sizing: border-box;
+}
 
-/* Mobile Responsiveness */
+/* Updated Mobile Responsiveness at the bottom of App.css */
 @media (max-width: 850px) {
-  /* Stack the text and image */
   .hero {
     flex-direction: column-reverse;
     text-align: center;
     padding-top: 20px;
-  }
-  
-  .objective {
-    margin: 0 auto 40px auto;
-    font-size: 16px;
-  }
-  
-  /* Fix Navbar Links and Logo overflow */
-  .navbar {
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .nav-links {
-    flex-wrap: wrap; /* Allows links to stack if they run out of room */
-    justify-content: center;
-    padding: 0;
-  }
-  
-  .logo-text-main {
-    font-size: 22px; /* Slightly smaller for mobile */
-  }
-  
-  .logo-text-sub {
-    font-size: 10px; /* Prevents text from stretching the screen */
-    letter-spacing: 1px; 
+    gap: 20px;
+    width: 100%;
   }
 
-  /* Fix Image and Gradient Shape scaling */
-  .hero-image-container {
-    margin: 0 auto 40px auto;
+  .hero-text {
     width: 100%;
-    max-width: 280px; /* Constrains it to fit any phone screen safely */
-  }
-  
-  .gradient-shape {
-    width: 100%;
-    height: 300px; /* Slightly shorter */
-  }
-  
-  .profile-pic {
-    width: 260px; /* Scales picture to fit inside the new box */
+    padding: 0 10px;
   }
 
-  /* Shrink massive headings */
   .name {
-    font-size: 45px;
+    font-size: 38px; /* Shorter for mobile */
   }
-  
+
   .subtitle {
-    font-size: 32px;
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .objective {
+    font-size: 16px;
+    margin: 0 auto 30px auto;
+  }
+
+  /* Fixed Image Container for Mobile */
+  .hero-image-container {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .gradient-shape {
+    width: 260px; /* Smaller than the container */
+    height: 320px;
+    border-radius: 40px;
+  }
+
+  .profile-pic {
+    width: 240px; /* Fits inside the shape */
+    height: auto;
+  }
+
+  /* Dots can cause overflow, hide them on mobile if they still cause issues */
+  .dots {
+    display: none; 
   }
 }
