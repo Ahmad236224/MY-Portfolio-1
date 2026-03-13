@@ -1,0 +1,240 @@
+/* Modern Dark Theme Variables */
+:root {
+  --bg-color: #0a192f;
+  --text-main: #ccd6f6;
+  --text-secondary: #8892b0;
+  --accent-color: #64ffda;
+  --card-bg: #112240;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.6;
+}
+
+.portfolio-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.logo {
+  color: var(--accent-color);
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--text-main);
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.greeting {
+  color: var(--accent-color);
+  margin-bottom: 10px;
+}
+
+.name {
+  font-size: 60px;
+  margin: 0;
+  color: var(--text-main);
+}
+
+.subtitle {
+  font-size: 50px;
+  margin: 0 0 20px 0;
+  color: var(--text-secondary);
+}
+
+.objective {
+  max-width: 600px;
+  color: var(--text-secondary);
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  border: 1px solid var(--accent-color);
+  color: var(--accent-color);
+  background: transparent;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.cta-button:hover {
+  background: rgba(100, 255, 218, 0.1);
+}
+
+/* General Sections */
+.section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 300px;
+  background-color: var(--card-bg);
+  margin-left: 20px;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.skill-category {
+  background-color: var(--card-bg);
+  padding: 20px;
+  border-radius: 10px;
+  border-bottom: 3px solid var(--accent-color);
+}
+
+.skill-category h4 {
+  margin-top: 0;
+  color: var(--text-main);
+}
+
+.skill-category p {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* Timeline (Experience) */
+.timeline-item {
+  border-left: 2px solid var(--accent-color);
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+.timeline-item h4 {
+  margin: 0;
+  color: var(--text-main);
+}
+
+.timeline-item h5 {
+  margin: 5px 0;
+  color: var(--accent-color);
+  font-weight: normal;
+}
+
+.timeline-item p {
+  color: var(--text-secondary);
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  padding: 25px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h4 {
+  font-size: 20px;
+  margin-top: 0;
+  color: var(--text-main);
+}
+
+.project-card p {
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+.tech-stack {
+  display: block;
+  margin-top: 20px;
+  color: var(--accent-color);
+  font-size: 13px;
+  font-family: monospace;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 80px 0 40px 0;
+}
+
+.footer h2 {
+  color: var(--text-main);
+}
+
+.footer p {
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto 30px auto;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  color: var(--text-main);
+}
+
+.social-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--accent-color);
+  text-decoration: none;
+  border: 1px solid var(--accent-color);
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.social-link:hover {
+  background: rgba(100, 255, 218, 0.1);
+}
