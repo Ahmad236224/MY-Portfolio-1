@@ -332,19 +332,61 @@ body {
 
 /* Mobile Responsiveness */
 @media (max-width: 850px) {
+  /* Stack the text and image */
   .hero {
     flex-direction: column-reverse;
     text-align: center;
     padding-top: 20px;
   }
+  
   .objective {
     margin: 0 auto 40px auto;
+    font-size: 16px;
   }
-  .hero-image-container {
-    margin: 0 auto 50px auto;
-  }
+  
+  /* Fix Navbar Links and Logo overflow */
   .navbar {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
+  }
+  
+  .nav-links {
+    flex-wrap: wrap; /* Allows links to stack if they run out of room */
+    justify-content: center;
+    padding: 0;
+  }
+  
+  .logo-text-main {
+    font-size: 22px; /* Slightly smaller for mobile */
+  }
+  
+  .logo-text-sub {
+    font-size: 10px; /* Prevents text from stretching the screen */
+    letter-spacing: 1px; 
+  }
+
+  /* Fix Image and Gradient Shape scaling */
+  .hero-image-container {
+    margin: 0 auto 40px auto;
+    width: 100%;
+    max-width: 280px; /* Constrains it to fit any phone screen safely */
+  }
+  
+  .gradient-shape {
+    width: 100%;
+    height: 300px; /* Slightly shorter */
+  }
+  
+  .profile-pic {
+    width: 260px; /* Scales picture to fit inside the new box */
+  }
+
+  /* Shrink massive headings */
+  .name {
+    font-size: 45px;
+  }
+  
+  .subtitle {
+    font-size: 32px;
   }
 }
