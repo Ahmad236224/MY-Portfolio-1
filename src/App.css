@@ -141,26 +141,27 @@ margin: 0;
   background: rgba(100, 255, 218, 0.1);
 }
 
-/* Image Section Magic */
+/* Update these in your App.css */
+
 .hero-image-container {
   flex: 1;
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  max-width: 400px;
+  align-items: center; /* Changed to center to balance the look */
+  max-width: 450px; /* Increased container width */
   margin-right: 20px;
 }
 
 .gradient-shape {
   position: absolute;
-  bottom: 0;
-  width: 320px;
-  height: 380px;
-  background: linear-gradient(135deg, #1b48aa 0%, #0e065c 50%, #b41135 100%);
-  border-radius: 60px; 
+  width: 340px; /* Slightly wider */
+  height: 400px; /* Slightly taller */
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #e11d48 100%);
+  border-radius: 60px;
   z-index: 1;
 }
+
 
 .dots {
   position: absolute;
@@ -185,11 +186,12 @@ margin: 0;
 .profile-pic {
   position: relative;
   z-index: 2;
-  width: 300px;
+  width: 110%; /* This makes the image slightly larger than the container */
+  max-width: 380px; /* Increased size of your photo */
   height: auto;
   object-fit: cover;
-  filter: drop-shadow(0px 10px 15px rgba(0,0,0,0.5));
-  margin-bottom: -10px;
+  filter: drop-shadow(0px 15px 25px rgba(0,0,0,0.6));
+  transform: translateY(-10px); /* Lifts you up slightly */
 }
 
 /* General Sections */
@@ -365,27 +367,22 @@ margin: 0;
     margin: 0 auto 30px auto;
   }
 
-  /* Fixed Image Container for Mobile */
+  @media (max-width: 850px) {
   .hero-image-container {
-    width: 100%;
     max-width: 300px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    position: relative;
+    margin: 0 auto 40px auto;
   }
 
   .gradient-shape {
-    width: 260px; /* Smaller than the container */
-    height: 320px;
-    border-radius: 40px;
+    width: 280px;
+    height: 340px;
   }
 
   .profile-pic {
-    width: 240px; /* Fits inside the shape */
-    height: auto;
+    width: 300px; /* Keeps you prominent on mobile */
+    max-width: 100%;
   }
-
+}
   /* Dots can cause overflow, hide them on mobile if they still cause issues */
   .dots {
     display: none; 
