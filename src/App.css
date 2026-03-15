@@ -458,3 +458,63 @@ margin: 0;
     font-size: 22px;
   }
 }
+/* --- Hero Layout Updates --- */
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+}
+
+.hero-text {
+  flex: 1; /* Takes up the remaining space */
+}
+
+/* --- The Glowing Gradient Photo Effect --- */
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* This creates the gradient ring */
+.gradient-border {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  /* The blue-to-purple gradient */
+  background: linear-gradient(135deg, #38bdf8, #818cf8, #c084fc);
+  padding: 6px; /* This controls how thick the gradient border is */
+  /* The glowing effect */
+  box-shadow: 0 0 35px rgba(129, 140, 248, 0.6); 
+}
+
+/* The actual image inside the ring */
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image doesn't stretch */
+  border-radius: 50%; /* Keeps the image perfectly round */
+  background-color: var(--bg-color); /* Fallback background */
+  border: 4px solid var(--bg-color); /* Creates a small dark gap between the image and the gradient */
+}
+
+/* --- Mobile Responsiveness for the new layout --- */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column-reverse; /* Stacks image on top of text on mobile */
+    text-align: center;
+    gap: 30px;
+  }
+
+  .hero {
+    align-items: center;
+    padding-top: 40px;
+  }
+
+  .gradient-border {
+    width: 250px; /* Make the photo slightly smaller on phones */
+    height: 250px;
+  }
+}

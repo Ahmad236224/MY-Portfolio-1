@@ -47,26 +47,31 @@ function App() {
         </ul>
       </nav>
 
-      {/* Hero Section with Picture */}
-      <header className="hero">
-        <div className="hero-text">
-          <p className="greeting">Hi, my name is</p>
-          <h1 className="name">Ahmad Riaz.</h1>
-          <h2 className="subtitle">I build things for the web and mobile.</h2>
-          <p className="objective">
-            To secure a rewarding and challenging position in a fast-growing company where I can 
-            utilize my abilities, add value in all business areas, and work as a valuable asset.
-          </p>
-          <a href="#contact" className="cta-button">Get In Touch</a>
-        </div>
+      <section className="hero">
+  <div className="hero-content">
+    
+    {/* Left Side: Your Text */}
+    <div className="hero-text">
+      <p className="greeting">Hi, my name is</p>
+      <h1 className="name">Ahmad Riaz</h1>
+      <h2 className="subtitle">Associate Software Engineer</h2>
+      <p className="objective">
+        A highly motivated associate software engineer with a strong foundation 
+        in AI models, machine learning, and modern web application development.
+      </p>
+      <a href="#projects" className="cta-button">Check out my work!</a>
+    </div>
 
-        <div className="hero-image-container">
-          <div className="gradient-shape"></div>
-          <div className="dots dots-left"></div>
-          <div className="dots dots-right"></div>
-<img src={profileImg} alt="Ahmad Riaz" className="profile-pic" />        </div>
-      </header>
+    {/* Right Side: Glowing Gradient Photo */}
+    <div className="hero-image-wrapper">
+      <div className="gradient-border">
+        {/* Make sure profileImg is imported at the top of your file! */}
+        <img src={profileImg} alt="Ahmad Riaz" className="profile-img" />
+      </div>
+    </div>
 
+  </div>
+</section>
       {/* Skills Section */}
       <section id="about" className="section">
         <h3 className="section-title">Technical Skills</h3>
