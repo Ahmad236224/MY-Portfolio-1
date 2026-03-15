@@ -369,8 +369,8 @@ margin: 0;
 
   @media (max-width: 850px) {
   .hero-image-container {
-    max-width: 300px;
-    margin: 0 auto 40px auto;
+    max-width: 400px;
+    margin: 0 auto 20px auto;
   }
 
   .gradient-shape {
@@ -379,12 +379,82 @@ margin: 0;
   }
 
   .profile-pic {
-    width: 300px; /* Keeps you prominent on mobile */
+    width: 400px; /* Keeps you prominent on mobile */
     max-width: 100%;
   }
 }
   /* Dots can cause overflow, hide them on mobile if they still cause issues */
   .dots {
     display: none; 
+  }
+}
+/* --- Responsive Media Queries --- */
+
+@media (max-width: 768px) {
+  .portfolio-container {
+    padding: 0 15px;
+  }
+
+  /* Navbar Mobile Layout */
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .nav-links {
+    padding: 0;
+    gap: 15px;
+  }
+
+  /* Hero Section scaling */
+  .hero {
+    min-height: 60vh; /* Shorter for mobile */
+    align-items: center; /* Center content for better mobile feel */
+    text-align: center;
+  }
+
+  .name {
+    font-size: 36px; /* Reduced from 60px */
+  }
+
+  .subtitle {
+    font-size: 28px; /* Reduced from 50px */
+  }
+
+  .objective {
+    font-size: 16px;
+  }
+
+  /* Section Titles */
+  .section-title {
+    font-size: 24px;
+    justify-content: center;
+  }
+
+  .section-title::after {
+    width: 50px; /* Shorten the decorative line */
+  }
+
+  /* Grids: Force single column on small screens */
+  .skills-grid, 
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .project-card {
+    padding: 20px;
+  }
+}
+
+/* Very Small Devices (Phones) */
+@media (max-width: 480px) {
+  .name {
+    font-size: 28px;
+  }
+  
+  .subtitle {
+    font-size: 22px;
   }
 }
